@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -46,8 +45,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <h1 className={`text-2xl md:text-3xl font-bold ${isScrolled ? "" : "text-waay-white"}`}>
-            <span className="text-waay-black">W</span>
+          <h1 className="text-2xl md:text-3xl font-bold">
+            <span className={isScrolled ? "text-waay-black" : "text-waay-white"}>W</span>
             <span className={`text-waay-yellow ${isScrolled ? "" : "animate-glow"}`}>aay</span>
           </h1>
         </Link>
@@ -69,7 +68,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="bg-waay-yellow hover:bg-waay-yellow/90 text-waay-black">
+          <Button className="bg-waay-yellow hover:bg-waay-yellow/90 text-waay-black font-medium">
             Start Project
           </Button>
         </nav>
